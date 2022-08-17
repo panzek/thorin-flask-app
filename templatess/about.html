@@ -1,0 +1,15 @@
+<!-- Using Template Inheritance -->
+{% extends "base.html" %}
+{% block content %}
+    <h1>About Page</h1>
+{% endblock %}
+
+<!-- 
+1. Essentially, when our about.html file loads, Flask inherits everything from the base template. 
+It then looks for a block element (which we called 'content') and injects that content into it.
+And we have a lot less code in our HTML files.
+2. This also means that if we make a change, like adding a new root and view, then we don't
+have to change it in every file.
+3. The word 'content' is just a word that we chose, but we could have called the block
+anything, "head", "footer", or "title", not just 'content'. 
+-->
